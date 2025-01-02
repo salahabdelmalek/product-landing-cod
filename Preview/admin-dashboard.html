@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر جودة - لوحة التحكم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-800 text-white">
+            <div class="p-4">
+                <h1 class="text-xl font-bold">لوحة التحكم</h1>
+            </div>
+            <nav class="mt-4">
+                <a href="admin-dashboard.html" class="flex items-center px-4 py-3 bg-gray-900 hover:bg-gray-700">
+                    <i class="fas fa-home ml-2"></i>
+                    الرئيسية
+                </a>
+                <a href="admin-products.html" class="flex items-center px-4 py-3 hover:bg-gray-700">
+                    <i class="fas fa-box ml-2"></i>
+                    المنتجات
+                </a>
+                <a href="admin-orders.html" class="flex items-center px-4 py-3 hover:bg-gray-700">
+                    <i class="fas fa-shopping-cart ml-2"></i>
+                    الطلبات
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-auto">
+            <header class="bg-white shadow-sm">
+                <div class="px-4 py-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-xl font-semibold">لوحة التحكم</h2>
+                        <button class="text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-sign-out-alt"></i>
+                            تسجيل الخروج
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-6">
+                <!-- Statistics Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                                <i class="fas fa-shopping-cart text-2xl"></i>
+                            </div>
+                            <div class="mr-4">
+                                <h3 class="text-gray-500 text-sm">الطلبات اليوم</h3>
+                                <p class="text-2xl font-semibold">12</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-green-100 text-green-600">
+                                <i class="fas fa-dollar-sign text-2xl"></i>
+                            </div>
+                            <div class="mr-4">
+                                <h3 class="text-gray-500 text-sm">المبيعات اليوم</h3>
+                                <p class="text-2xl font-semibold">35,400 د.ج</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-purple-100 text-purple-600">
+                                <i class="fas fa-users text-2xl"></i>
+                            </div>
+                            <div class="mr-4">
+                                <h3 class="text-gray-500 text-sm">العملاء الجدد</h3>
+                                <p class="text-2xl font-semibold">8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-4 border-b">
+                        <h3 class="text-xl font-semibold">آخر الطلبات</h3>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">رقم الطلب</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">العميل</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">المنتج</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">المبلغ</th>
+                                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">#12345</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">أحمد محمد</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">منتج رائع 1</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">2999 د.ج</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            تم التسليم
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">#12344</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">سارة أحمد</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">منتج رائع 2</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm">3999 د.ج</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                            قيد التوصيل
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
