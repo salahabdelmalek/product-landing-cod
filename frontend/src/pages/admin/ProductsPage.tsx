@@ -5,13 +5,21 @@ import Sidebar from '../../components/admin/Sidebar';
 import ProductForm from '../../components/admin/ProductForm';
 import { PencilIcon, TrashIcon, PlusIcon } from '@heroicons/react/24/outline';
 
+interface Offer {
+  name: string;
+  description?: string;
+  price: number;
+}
+
 interface Product {
   _id: string;
   name: string;
   image: string;
+  descriptionImage: string;
   originalPrice: number;
   discountedPrice: number;
   isActive: boolean;
+  offers: Offer[];
 }
 
 const ProductsPage = () => {
